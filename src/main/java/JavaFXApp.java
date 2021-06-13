@@ -11,7 +11,7 @@ public class JavaFXApp extends Application {
 
     @Override
     public void start(Stage stage) throws Exception {
-        Parent root = FXMLLoader.load(getClass().getResource("/view/MainScreen.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("/view/LoginScreen.fxml"));
         stage.setScene(new Scene(root));
         stage.setTitle("Afspraken Agenda");
         stage.show();

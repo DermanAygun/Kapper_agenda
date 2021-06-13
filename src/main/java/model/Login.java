@@ -4,13 +4,12 @@ import java.util.ArrayList;
 
 public class Login {
     private static Login singleton;
-    private User user;
+    private static User user;
 
     private ArrayList<User> users = new ArrayList<>();
 
     private Login() {
-//        user = new User("derman","a","0123","da@da.nl");
-        user = null;
+        users.add(new User("123","123","derman","a","0123","da@da.nl"));
     }
 
     public static Login getInstance() {
@@ -21,12 +20,15 @@ public class Login {
         return singleton;
     }
 
+    public ArrayList<User> getUsers() {
+        return users;
+    }
+
     public User getUser() {
         return user;
     }
 
     public void setUser(User user) {
         this.user = user;
-        users.add(user);
     }
 }

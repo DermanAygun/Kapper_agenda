@@ -1,3 +1,13 @@
-Main.class
 JavaFXApp.class
 controller\MainController.class
+Main.class
+test\TreatmentNormalTest.class
+controller\LoginController.class
+controller\appointmentCrud\AppointmentDeleteController.class
+test\UserTest.class
+test\LoginTest.class
+controller\appointmentCrud\AppointmentReadController.class
+test\TreatmentSpecialTest.class
+controller\appointmentCrud\AppointmentUpdateController.class
+test\AppointmentTest.class
+test\TreatmentTest.class

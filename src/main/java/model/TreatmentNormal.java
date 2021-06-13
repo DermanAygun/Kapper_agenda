@@ -4,11 +4,11 @@ public class TreatmentNormal extends Treatment{
 
     @Override
     protected double getTotal() {
-        return super.getPrice();
+        return 10;
     }
 
     @Override
-    public String showTreatment(String text) {
+    public String showTreatment() {
         return "normal treatment";
     }
 }

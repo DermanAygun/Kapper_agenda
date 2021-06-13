@@ -1,47 +1,34 @@
 package model;
 
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
+
 import java.time.LocalDate;
-import java.time.LocalTime;
 import java.util.ArrayList;
 
 public class Appointment {
     private String name;
     private int code;
     private LocalDate date;
-    private LocalTime time;
+    private String time;
 
-    private Login loggedInUser = Login.getInstance();
+    private Login hasUser;
     private Treatment hasTreatment = null;
 
-    ArrayList<Appointment> appointmets = new ArrayList<>();
+    public static ArrayList<Appointment> appointments = new ArrayList<>();
 
-    public Appointment(String name, int code, LocalDate date, LocalTime time) {
+    public Appointment(String name, LocalDate date, String time, Treatment hasTreatment) {
+        this.hasUser = Login.getInstance();
         this.name = name;
-        this.code = code;
-        this.date = date;
-        this.time = time;
-        appointmets.add(this);
-    }
-
-    public Appointment(String name, int code, LocalDate date, LocalTime time, Treatment hasTreatment) {
-        this.name = name;
-        this.code = code;
+        this.code = 0;
         this.date = date;
         this.time = time;
         this.hasTreatment = hasTreatment;
-        appointmets.add(this);
+        appointments.add(this);
     }
 
-    public void updateAppointment(String name, int code, LocalDate date, LocalTime time) {
+    public void updateAppointment(String name, LocalDate date, String time, Treatment hasTreatment) {
         this.setName(name);
-        this.setCode(code);
-        this.setDate(date);
-        this.setTime(time);
-    }
-
-    public void updateAppointment(String name, int code, LocalDate date, LocalTime time, Treatment hasTreatment) {
-        this.setName(name);
-        this.setCode(code);
         this.setDate(date);
         this.setTime(time);
         this.setHasTreatment(hasTreatment);
@@ -52,7 +39,7 @@ public class Appointment {
     }
 
     public void deleteAppointment() {
-        appointmets.remove(this);
+        appointments.remove(this);
     }
 
     @Override
@@ -62,7 +49,7 @@ public class Appointment {
                 ", code=" + code +
                 ", date=" + date +
                 ", time=" + time +
-                ", hasUser=" + loggedInUser +
+                ", hasUser=" + hasUser +
                 ", hasTreatment=" + hasTreatment +
                 '}';
     }
@@ -91,11 +78,11 @@ public class Appointment {
         this.date = date;
     }
 
-    public LocalTime getTime() {
+    public String getTime() {
         return time;
     }
 
-    public void setTime(LocalTime time) {
+    public void setTime(String time) {
         this.time = time;
     }
 

@@ -1,14 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="view.AppointmentScreen"
-            prefHeight="400.0" prefWidth="600.0">
-
+<AnchorPane fx:id="rootPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.AppointmentController">
+   <children>
+      <Button fx:id="saveAppointmentButton" layoutX="243.0" layoutY="347.0" mnemonicParsing="false" onAction="#saveAppointment" prefHeight="26.0" prefWidth="83.0" style="-fx-background-color: transparent; -fx-border-color: black;" text="Bevestig" />
+      <Label layoutX="245.0" layoutY="32.0" text="Naam" />
+      <Label layoutX="244.0" layoutY="86.0" text="Datum" />
+      <Label layoutX="243.0" layoutY="141.0" text="Tijdstip" />
+      <TextField fx:id="nameInput" layoutX="245.0" layoutY="50.0" />
+      <DatePicker fx:id="dateInput" layoutX="245.0" layoutY="104.0" />
+      <TextField fx:id="timeInput" layoutX="245.0" layoutY="159.0" prefHeight="26.0" prefWidth="54.0" />
+      <Label fx:id="returnLabel" layoutX="14.0" layoutY="14.0" onMouseClicked="#Return" text="Terug" />
+      <Label layoutX="317.0" layoutY="141.0" text="Behandeling" />
+      <CheckBox fx:id="treatmentCheck" layoutX="317.0" layoutY="163.0" mnemonicParsing="false" onAction="#check" prefHeight="18.0" prefWidth="149.0" text="Speciale behandeling?" />
+      <TextArea fx:id="treatmentInfo" layoutX="244.0" layoutY="197.0" prefHeight="87.0" prefWidth="200.0" visible="false" />
+      <Label fx:id="treatmentPriceLabel" layoutX="242.0" layoutY="291.0" text="Behandeling prijs:" visible="false" />
+      <TextField fx:id="treatmentPrice" layoutX="333.0" layoutY="286.0" prefHeight="26.0" prefWidth="47.0" visible="false" />
+   </children>
 </AnchorPane>
