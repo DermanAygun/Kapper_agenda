@@ -8,7 +8,7 @@
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane fx:id="rootPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.appointmentCrud.AppointmentUpdateController">
+<AnchorPane fx:id="rootPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.derman.controller.appointmentCrud.AppointmentUpdateController">
    <children>
       <Label fx:id="Return" layoutX="14.0" layoutY="14.0" onMouseClicked="#Return" text="Terug" />
       <Button fx:id="updateButton" layoutX="327.0" layoutY="343.0" mnemonicParsing="false" onAction="#update" prefHeight="27.0" prefWidth="110.0" style="-fx-background-color: transparent; -fx-border-color: black;" text="Wijzig Afspraak" />
